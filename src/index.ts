@@ -46,8 +46,23 @@ const title = "Codevolution";
 
 let isBeginner : boolean = true;
 let total : number = 0;
-let name : string = "John"
+let name : string = "John";
 
 let sentence : string = `my name is ${name}`;
 
 console.log(sentence);
+
+function finalValueAfterOperations(operations: string[]): number {
+    let result = 0;
+
+    for(let operation of operations) {
+        const isIncrement = operation.includes('+');
+
+        result += isIncrement ? 1 : -1;
+    }
+
+    return result;
+}
+
+console.log(finalValueAfterOperations(["--X","X++","X++"]));
+console.log(finalValueAfterOperations(["++X","++X","X++"]));
