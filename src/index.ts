@@ -66,3 +66,15 @@ function finalValueAfterOperations(operations: string[]): number {
 
 console.log(finalValueAfterOperations(["--X","X++","X++"]));
 console.log(finalValueAfterOperations(["++X","++X","X++"]));
+
+let skills : string[] = [];
+skills[0] = "hello";
+skills[1] = "hello1";
+
+console.log(skills.toString());
+
+let ser = [1,2,3];
+
+let doubleIt = ser.map(e=>e*2);
+
+console.log(doubleIt);
