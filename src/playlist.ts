@@ -38,13 +38,6 @@ class Songs{
 
 class Playlists{
     private _listOfSongs : Array<Songs> = [];
-    private _playlistName : string;
-
-
-    constructor(listOfSongs: Array<Songs>, playlistName: string) {
-        this._listOfSongs = listOfSongs;
-        this._playlistName = playlistName;
-    }
 
     public add(param : Songs): void {
         this._listOfSongs.push(param);
@@ -59,13 +52,15 @@ class Playlists{
         this._listOfSongs = value;
     }
 
-    get playlistName(): string {
-        return this._playlistName;
-    }
-
-    set playlistName(value: string) {
-        this._playlistName = value;
-    }
 
 
 }
+
+const numb = new Songs("Numb", "Marshmello", 180)
+const antiHero = new Songs("Anti-Hero", "Taylor Swift", 210);
+
+
+const runningPlaylist = new Playlists();
+runningPlaylist.add(numb);
+runningPlaylist.add(antiHero);
+
